@@ -1,0 +1,26 @@
+{% extends 'DashboardExtend.html' %}
+	{% block content %}
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="background">
+			<div class="form">
+				<br>
+				<center><h1>Create Keyword</h1></center>
+				<br>
+				<hr>
+				<div class="first_name">
+					<div class="name">Name</div>
+					<input type="text" name="key_s" placeholder="Type your Name">
+				</div>
+				<div class="first_name">
+					<div class="name">Description</div>
+					<textarea  name="w3review" rows="2" cols="50">
+					</textarea>
+				</div>
+				<div class="submitt">
+					<button class="submit">submit</button>
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock %}

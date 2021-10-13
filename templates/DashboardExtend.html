@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/chatbot_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header>
+
+	<div class="top-1">
+		<div class="navi">
+			<div class="logo">logo</div>
+			<div class="navvi">
+			<ol id="navigation">
+				<li><a href="/dashboard/">home</a></li>
+				<li><a href="/agent/">Create Agent</a></li>
+				<li><a href="/List/">List Agents</a></li>
+				<li><a href="/keyword/">Create Keyword</a></li>
+				<li><a href="/Topic/">Create Topics</a></li>
+				<li><a href="/Chat/">Chat Window</a></li>
+				<li><a href="/AgentWithTopic/">Agent with topic</a></li>
+				<li><a href="/TopicWithKeyword/">Topic with Keyword</a></li>
+				
+			</ol>
+		</div>
+		</div>
+	</div>
+	<div class="top-2">
+
+		<div class="icons">
+			<a href="/logout/"><img src="/static/images/login.png"></a>
+
+			<span class="username">{{ request.user.username }} </span>
+			<img src="/static/images/user.png">
+		</div>
+		{% block content %}
+
+		{% endblock %}
+	</div>
+
+</header>
+
+</body>  
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    var url = window.location.pathname;
+    $('#navigation li a[href="'+url+'"]').addClass('active');
+});
+ 
+</script>
+
+</html>

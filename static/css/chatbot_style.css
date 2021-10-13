@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{ margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6,p,a{font-family: 'Roboto', sans-serif !important;}
+input:focus{outline:none;}
+.main-link-form {
+    width: 300px;
+    position: fixed;
+    bottom: 52px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 6px 17px #b4b4b7;
+	right: 70px;
+}
+.main-admin {background-color: #8dc5e1 ; }
+.main-admin h2 {
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 20px 0 20px 20px;
+	margin: 0;
+}
+.pull-left{float: left;}
+.pull-right{float: right; text-align: right;}
+.full-width{width: 100%;}
+.main-admin span {
+    float: right;
+	    padding-right: 10px;
+}
+.main-admin span i.fa {-webkit-text-stroke: 2px #51758B;}
+.admin{padding-top: 53px; font-family: 'Roboto', sans-serif !important;}
+.user{padding-top: 30px; font-family: 'Roboto', sans-serif !important;}
+.main-admin-chat{padding: 0 20px;     box-sizing: border-box;}
+.file-output{    border-top: 1px solid #000;position: relative;padding: 15px 20px;box-sizing: border-box;     margin-top: 92px;}
+input[type=file] {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+    display: inline-block;
+	    margin-top: 0;
+	    position: relative;
+    right: 4px;
+	top: 3px;
+  
+  
+}
+
+input[type=file]:before {
+    width: 27px;
+    height: 27px;
+    font-size: 23px;
+    line-height: 32px;
+    content: "\f055";
+    display: inline-block;
+    font-family: 'FontAwesome';
+    background: white;
+    border: none;
+    padding: 0;
+    text-align: center;
+  
+  
+}
+
+input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file-output input[type="text"] {
+         border: none;
+    padding: 0;
+    width: 80%;
+    box-sizing: border-box;
+	height: 30px;
+}
+.main-admin span.minni {
+    margin: 3px 0 0 0;
+}
+
+span.submitting input[type="submit"] {
+    margin: 0 !important;
+    padding-right: 0;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    padding: 0 !important;
+	
+}
+
+span.submitting {
+    position: absolute;
+    top: 21px;
+}
+
+span.submitting:after {
+    font-family: FontAwesome;
+   content: "\f1d8";
+    font-size: 20px;
+    position: absolute;
+    right: 12px;
+    top: 1px;
+    pointer-events: none;
+}
+
+.main-admin{
+color:#8dc5e1;
+}

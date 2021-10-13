@@ -1,0 +1,37 @@
+{% extends 'DashboardExtend.html' %}
+{% block content %}
+
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+			<div class="background">
+				<div class="form">
+					<br>
+					<center><h1>Create Agent</h1></center>
+					<br>
+					<hr>
+					<br>
+					<div class="first_name">
+						<label for="Name"><b>Name</b></label>
+			      		<input type="text" placeholder="Enter Name" name="name_agent" required>
+			      	</div>
+			      	
+			      	<div class="first_name">
+			      		<div class="name">Visibility</div>
+			      		<input type="text"  placeholder="Enter Visibility" name="text" required>
+			      	</div>	
+					<div class="first_name">
+						<div class="name">Description</div>
+						<textarea  name="comments" rows="2" cols="50">
+						</textarea>
+					</div>
+					<div class="submitt">
+					<button class="submit">submit</button>
+				</div>
+				</div>
+			</div>
+
+		
+	</form>
+
+
+{% endblock %}

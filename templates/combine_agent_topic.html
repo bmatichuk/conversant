@@ -1,0 +1,48 @@
+{% extends 'DashboardExtend.html' %}
+	{% block content %}
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="background">
+			<div class="form">
+				<br>
+				<center><h1>Agent With Topic</h1></center>
+				<br>
+				<hr>
+
+				<div class="first_name">
+					<div class="name">Select Agent</div>
+
+					<select id="cars" name="select">
+						<option value=" ">Select...</option>
+						{% for agent in name_agent %}
+						  <option value="{{agent}}">{{agent}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<div class="first_name">
+					<div class="name">Select Topic</div>
+
+					<select  name="test">
+						<option value=" ">Select...</option>
+						{% for Topic in name_agent_topic %}
+						  <option value="{{Topic}}">{{Topic}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				
+				<!-- <div class="first_name">
+					<div class="name">Name</div>
+					<input type="text" placeholder="Type your Name">
+				</div>
+				<div class="first_name">
+					<div class="name">Description</div>
+					<textarea  name="w3review" rows="2" cols="50">
+					</textarea>
+				</div> -->
+				<div class="submitt">
+					<button class="submit">submit</button>
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock %}

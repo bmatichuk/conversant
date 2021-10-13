@@ -1,0 +1,30 @@
+
+{% extends 'DashboardExtend.html' %}
+{% block content %}
+    <br>
+<br>
+<br>
+    <br>
+<br>
+<br>
+    <h1>Agent with Topics</h1>
+    <br>
+<br>
+<br>
+  <p>Agent Name:  {{user_id}}</p>
+<br>
+    <table>
+      <tr>
+        <th>Topic Name</th>
+        <th>Description</th>
+      </tr>
+      {% for i,j in topica %}
+        <tr>
+          <td><a href="/Key?info={{i}}"> {{i}}</a></td>
+          <td>{{j}}</td>
+        </tr>
+      {% endfor %}
+
+    </table>
+
+{% endblock %}
