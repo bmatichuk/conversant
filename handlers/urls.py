@@ -35,8 +35,10 @@ urlpatterns = [
     path('A/',views.Topics_Agent, name='A'),
     path('AgentWithTopic/',views.Agent_with_topic, name='A'),
     path('TopicWithKeyword/',views.Topic_with_keyword, name='A'),
-    path('Chat/',views.chat_bot, name='chat '),
+    path('Chat/',views.chats, name='chat'),
     path('Key/',views.keyword_topic_show, name='Key'),
+    path('chatting/',views.chatting, name='chatting'),
+
     
 
 ]

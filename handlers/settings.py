@@ -83,25 +83,17 @@ WSGI_APPLICATION = 'handlers.wsgi.application'
 #         'PASSWORD': 'Admin123',
 #     }
 # }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',
-        'NAME': 'handler',
-        'USER': 'postgres',
+        'NAME': 'TestDB',
+        'USER': 'root',
         'PASSWORD': 'data@123',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': 'localhost',
-#         'NAME': 'TestDB',
-#         'USER': 'root',
-#         'PASSWORD': 'data@123',
-#     }
-# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',

@@ -4,17 +4,12 @@
 
 {% extends 'DashboardExtend.html' %}
 {% block content %}
-    <br>
-<br>
-<br>
-    <br>
-<br>
-<br>
-    <h1> List of Agents</h1>
-    <br>
-<br>
-<br>
-<br>
+<div class="background">
+<div class="list-agent">
+   <div class="form">
+       <br>
+    <center><h1> List of Agents</h1></center><br><hr><br>
+   <div class="table-box">
     <table>
       <tr>
         <th>Agent Name</th>
@@ -29,48 +24,10 @@
 					<td>{{des}}</td>
 				</tr>
 			{% endfor %}
-
-
-
-
     </table>
-
-<!--	<div class="background">-->
-<!--			<div class="main_list">-->
-<!--				<h1>List Agent</h1>-->
-<!--				<div class="left">-->
-<!--					&lt;!&ndash; <form action="TopicAgent"> &ndash;&gt;-->
-<!--						{% for name,id,des in list %}-->
-<!--							<div class="useer">Name: <a href="/A?info={{name}}"> {{name}} </a></div>-->
-<!--							<div class="idd">User Id {{id}}</div>-->
-<!--							<div class="peragrah"><p>{{des}}</p>-->
-<!--							</div>-->
-<!--						{% endfor %}-->
-<!--					{% for topic,dis in topica %}-->
-
-<!--						<h1><a href="/Key?info={{topic}}"> {{topic}}</a></h1>-->
-<!--						<p>{{dis}}</p>-->
-<!--					{% endfor %}-->
-<!--					{% for keyword,des in keyword_list %}-->
-<!--						<h1>{{keyword}}</h1>-->
-<!--						<p>{{des}}</p>-->
-<!--					{% endfor %}-->
-<!--					&lt;!&ndash; </form> &ndash;&gt;-->
-<!--				</div>-->
-
-<!--				&lt;!&ndash; <div class="right">-->
-<!--					<div class="imgg">-->
-<!--						<div class="img_girl">-->
-<!--							<img src="/static/images/boy.png">-->
-<!--						</div>-->
-<!--					</div>-->
-<!--					<div class="useer">Name</div>-->
-<!--					<div class="idd">User Id (980876535)</div>-->
-<!--					<div class="peragrah">-->
-<!--						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
-<!--					</div>-->
-<!--				</div> &ndash;&gt;-->
-<!--			</div>-->
-<!--		</div>-->
+    </div>
+    </div>
+    </div>
+    </div>
 
 {% endblock %}

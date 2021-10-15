@@ -1,104 +1,278 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body{ margin:0; padding:0; }
-h1,h2,h3,h4,h5,h6,p,a{font-family: 'Roboto', sans-serif !important;}
-input:focus{outline:none;}
-.main-link-form {
-    width: 300px;
-    position: fixed;
-    bottom: 52px;
-    border: 1px solid #ccc;
-    box-shadow: 5px 6px 17px #b4b4b7;
-	right: 70px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
 }
-.main-admin {background-color: #8dc5e1 ; }
-.main-admin h2 {
-    color: #fff;
-    font-weight: normal;
-    font-size: 20px;
-    padding: 20px 0 20px 20px;
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Roboto", sans-serif !important;
 }
-.pull-left{float: left;}
-.pull-right{float: right; text-align: right;}
-.full-width{width: 100%;}
+input:focus {
+  outline: none;
+}
+
+.main-admin {
+  background-color: #8dc5e1;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+  text-align: right;
+}
+.full-width {
+  width: 100%;
+}
 .main-admin span {
-    float: right;
-	    padding-right: 10px;
+  float: right;
+  padding-right: 10px;
 }
-.main-admin span i.fa {-webkit-text-stroke: 2px #51758B;}
-.admin{padding-top: 53px; font-family: 'Roboto', sans-serif !important;}
-.user{padding-top: 30px; font-family: 'Roboto', sans-serif !important;}
-.main-admin-chat{padding: 0 20px;     box-sizing: border-box;}
-.file-output{    border-top: 1px solid #000;position: relative;padding: 15px 20px;box-sizing: border-box;     margin-top: 92px;}
-input[type=file] {
-    cursor: pointer;
-    width: 27px;
-    height: 27px;
-    overflow: hidden;
-    display: inline-block;
-	    margin-top: 0;
-	    position: relative;
-    right: 4px;
-	top: 3px;
-  
-  
+.main-admin span i.fa {
+  -webkit-text-stroke: 2px #51758b;
+}
+.admin {
+  padding-top: 53px;
+  font-family: "Roboto", sans-serif !important;
 }
 
-input[type=file]:before {
-    width: 27px;
-    height: 27px;
-    font-size: 23px;
-    line-height: 32px;
-    content: "\f055";
-    display: inline-block;
-    font-family: 'FontAwesome';
-    background: white;
-    border: none;
-    padding: 0;
-    text-align: center;
-  
-  
+.main-admin-chat {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.file-output {
+  border-top: 1px solid #000;
+  position: relative;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  margin-top: 92px;
+}
+input[type="file"] {
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 0;
+  position: relative;
+  right: 4px;
+  top: 3px;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]:before {
+  width: 27px;
+  height: 27px;
+  font-size: 23px;
+  line-height: 32px;
+  content: "\f055";
+  display: inline-block;
+  font-family: "FontAwesome";
+  background: white;
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+
+input[type="file"]::-webkit-file-upload-button {
   visibility: hidden;
 }
 .file-output input[type="text"] {
-         border: none;
-    padding: 0;
-    width: 80%;
-    box-sizing: border-box;
-	height: 30px;
+  border: none;
+  padding: 0;
+  width: 80%;
+  box-sizing: border-box;
+  height: 30px;
 }
 .main-admin span.minni {
-    margin: 3px 0 0 0;
+  margin: 3px 0 0 0;
 }
 
 span.submitting input[type="submit"] {
-    margin: 0 !important;
-    padding-right: 0;
-    background-color: transparent;
-    border: none;
-    color: transparent;
-    padding: 0 !important;
-	
+  margin: 0 !important;
+  padding-right: 0;
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  padding: 0 !important;
 }
 
 span.submitting {
-    position: absolute;
-    top: 21px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
 }
 
 span.submitting:after {
-    font-family: FontAwesome;
-   content: "\f1d8";
-    font-size: 20px;
-    position: absolute;
-    right: 12px;
-    top: 1px;
-    pointer-events: none;
+  font-family: FontAwesome;
+  content: "\f1d8";
+  font-size: 20px;
+  position: absolute;
+  right: 12px;
+  top: 1px;
+  pointer-events: none;
 }
 
-.main-admin{
-color:#8dc5e1;
+.main-admin {
+  color: #8dc5e1;
+}
+
+.main-link-form form input[type="file"] {
+  position: absolute !important;
+  left: 5px;
+  top: 0px;
+}
+
+.main-link-form {
+  position: fixed;
+  bottom: 10px;
+  top: 67px;
+  left: 230px;
+  right: 10px;
+  transition: 0.2s;
+}
+
+.main-link-form .modal {
+  position: absolute;
+  bottom: 0!important;
+  left: 0!important;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  transition: .2s;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 15px -5px rgb(0 0 0 / 50%);
+}
+span.buttons img {
+    width: 18px;
+}
+.main-link-form .pull-left.full-width.main-admin-chat {
+  height: calc(100vh - 220px);
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.main-link-form form input[type="file"] {
+  position: unset;
+  margin: 10px;
+}
+
+.main-link-form form {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.main-link-form input#lname {
+  width: 100%;
+  height: 50px;
+  padding: 15px 0px 15px 60px;
+}
+
+span.submitting {
+  position: absolute;
+  top: 14px;
+  right: 5px;
+}
+
+.main-admin h2 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+}
+
+.main-admin {
+}
+.main-admin .heading div {
+  display: flex;
+}
+
+.main-admin.intro {
+  bottom: 0;
+  top: auto;
+  height: 69px;
+  width: 200px;
+  right: 20px;
+  left: auto;
+}
+
+.main-admin h2 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.main-admin .heading {
+  padding: 20px 0 20px 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.modal .header {
+  padding: 10px 12px;
+  position: relative;
+}
+
+.modal .header .buttons {
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+
+.modal .header .buttons span {
+  border-left: 1px solid #ccc;
+  padding: 9px 10px 8px;
+  cursor: pointer;
+}
+
+.modal .header .buttons span:hover {
+  background: #eee;
+}
+
+.modal .content {
+  border-top: 1px solid #ccc;
+  padding: 20px;
+}
+
+.content .user {
+    background-color: #8cc4e0;
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 25px 25px 0 25px;
+    font-size: 14px;
+    margin: 15px 0 0 0;
+}
+
+.content .admin {
+    background-color: #8ce0bd;
+    padding: 5px 15px;
+    border-radius: 25px 25px 25px 0;
+    font-size: 14px;
+    margin: 15px 0 0 0;
+    display: inline-block;
+    clear: both;
+    width: auto;
+}
+
+.main-link-form.intro .modal{
+  width: 400px;
+    top: auto;
+    left: auto!important;
+}
+
+
+.main-link-form .modal .header span.close {
+    color: #000;
+    font-weight: 700;
 }

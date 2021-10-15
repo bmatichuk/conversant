@@ -2,36 +2,77 @@
 {% block content %}
 
 <div class="main-link-form">
-	<div class="main-admin">
-	  <h2> Admin <span> <i class="fa fa-times" ></i> </span> <span class="minni"> <i class="fa fa-minus" ></i> </span>  </h2>
+	<div class="modal">
+		<div class="header">
+		  <span>Chat Window</span>
+		  <span class="buttons"><span class="min"><img src="https://img.icons8.com/windows/32/000000/macos-minimize.png"/></span><span class="max"><img src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"/></span><span class="min"><img src="https://img.icons8.com/flat-round/64/000000/delete-sign.png"/></span></span>
+		</div>
+		<div class="content">
+			<div class="pull-left full-width main-admin-chat"></div>
+				<form method="GET" action={% url 'chatting' %} name="myForm">
+				  <input type="file" />
+				  <input type="text" id="lname" name="message" placeholder="Write a Message....." required>
+				  <span class="submitting"><input type="submit" value="Send" class="btn btn-default" id="submit1" /></span>
+				</form>
+		</div>
 	</div>
-	<div class="pull-left full-width main-admin-chat">
-		<div class="admin pull-left full-width"> Hi </div>
-		<div class="user pull-right full-width">admin</div>
-	</div>
-	
-	<div class="pull-left full-width main-admin-chat">
-		<div class="admin pull-left full-width"> How are You ? </div>
-		<div class="user pull-right full-width"> Fine You say</div>
-	</div>
-	
-	<div class="pull-left full-width main-admin-chat">
-		<div class="admin pull-left full-width"> Ok !!</div>
-		<div class="user pull-right full-width">Yup !!</div>
-	</div>
-	<div class="file-output pull-left full-width">
-	
-		<form action="/action_page.php">
-		 <input type="file" />
-		  <input type="text" id="lname" name="lname" placeholder="Write a Message.....">
-		  <span class="submitting"><input type="submit" value="Send" class="btn btn-default" /></span>
-		  
-		  
-		  
-		</form> 
-		  
-	</div>	
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+
+jQuery(document).ready(function() {
+	jQuery('#submit1').click(function(Event) {
+		Event.preventDefault();
+		var message = jQuery("#lname").val();
+
+		if (message == "") {
+			return false;
+		  }
+
+		jQuery(".pull-left.full-width.main-admin-chat").append('<div class="user pull-right full-width">'+message+'</div>');
+		jQuery("#lname").val("");
+		var form = 'message='+message;
+		jQuery.ajax({
+			url: 'http://127.0.0.1:8000/chatting/',
+			type: 'GET',
+			data:form,
+			dataType: "json",
+			success: function(dataa) {
+				jQuery(".pull-left.full-width.main-admin-chat").append('<div class="admin pull-left full-width">'+dataa.data+'</div>');
+        	jQuery(".pull-left.full-width.main-admin-chat").stop().animate({ scrollTop: $(".pull-left.full-width.main-admin-chat")[0].scrollHeight}, 1000);
+			}
+		});
+	});
+	});
+jQuery(document).ready(function($){
+  $(document).on('click', '.min', function(){
+    $(this).closest('.modal').find('.content').slideUp();
+    $(this).closest('.modal').animate({'left':0,'bottom':0});
+  });
+
+  $(document).on('click', '.max', function(){
+    $(this).closest('.modal').find('.content').slideDown();
+    $(this).closest('.modal').animate({'left':'20px','bottom':'50%'});
+  });
+
+  $(document).on('click', '.min', function(){
+    $(this).closest('.modal').slideDown();
+  });
+<!--   $(document).on('click', '.close', function(){-->
+<!--    $(this).closest('.modal').fadeOut();-->
+<!--  });-->
+});
+$(document).ready(function(){
+  $(".main-link-form .min").click(function(){
+    $(".main-link-form").addClass("intro");
+  });
+
+  $(".main-link-form .max").click(function(){
+    $(".main-link-form").removeClass("intro");
+  });
+});
 
 
+</script>
 {% endblock %}

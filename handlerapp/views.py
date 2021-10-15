@@ -8,8 +8,36 @@ from django.contrib.auth.models import User
 from handlerapp.forms import *
 from handlerapp.models import *
 import os
-
+import json
+import openai as ai
 from .models import *
+start_chat_log = """Human: Hello, I am Human.
+AI: Hello, human I am openai gpt3.
+Human: How are you?
+AI: I am fine, thanks for asking. 
+"""
+def chats(request):
+    return render(request, 'chatbot.html')
+
+
+def chatting(request):
+    if request.method == 'GET':
+        quest = request.GET['message']
+        print(":----------------", quest)
+        ai.api_key = "sk-AeXpLitBfpAiHS8jwKg6KCcwsc6vd967Spyx0QK2"
+        completion = ai.Completion()
+        # def chat(question,chat_log = None) -> str:
+        question = quest
+        chat_log = None
+        if (chat_log == None):
+            chat_log = start_chat_log
+        prompt = f"{chat_log}Human: {question}\nAI:"
+        response = completion.create(prompt=prompt, engine="davinci", temperature=0.85, top_p=1, frequency_penalty=0,
+                                     presence_penalty=0.7, best_of=2, max_tokens=100, stop="\nHuman: ")
+        data = response.choices[0].text
+        print(data)
+        dataa = {"type": "sucess", 'data': data,'question':question}
+        return HttpResponse(json.dumps(dataa), content_type="application/json")
 
 
 @login_required
