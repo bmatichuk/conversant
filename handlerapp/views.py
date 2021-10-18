@@ -24,7 +24,7 @@ def chatting(request):
     if request.method == 'GET':
         quest = request.GET['message']
         print(":----------------", quest)
-        ai.api_key = "sk-AeXpLitBfpAiHS8jwKg6KCcwsc6vd967Spyx0QK2"
+        ai.api_key = "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"
         completion = ai.Completion()
         # def chat(question,chat_log = None) -> str:
         question = quest
